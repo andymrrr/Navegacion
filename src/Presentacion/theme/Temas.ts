@@ -7,6 +7,7 @@ export const ColoresGlobales ={
     aviso: '#fca311',
     peligro: '#e71d36',
     oscuro: '#22223b',
+    blanco:"white",
   
     fondo: '#fff',
 }
