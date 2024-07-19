@@ -4,6 +4,7 @@ import { PerfilPantalla } from '../Pantallas/Perfil/Perfil-Pantalla';
 import { ColoresGlobales } from '../theme/Temas';
 import { DrawerPersonalizao } from '../Componentes/Drawer/Drawer-Personalizao';
 import { useWindowDimensions } from 'react-native';
+import { BotonTabsNavegacion } from './Boton-Tabs-Navegacion';
 
 const Drawer = createDrawerNavigator();
 
@@ -25,7 +26,8 @@ export const DrawerNavegacion =() => {
         }
       }}
     >
-      <Drawer.Screen name="StackNavegacion" component={StackNavegacion} />
+      {/* <Drawer.Screen name="StackNavegacion" component={StackNavegacion} /> */}
+      <Drawer.Screen name="BotonTabsNavegacion" component={BotonTabsNavegacion} />
       <Drawer.Screen name="Perfil" component={PerfilPantalla} />
     </Drawer.Navigator>
   );
