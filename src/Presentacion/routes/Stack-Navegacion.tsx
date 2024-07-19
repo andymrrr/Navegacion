@@ -3,6 +3,8 @@ import { InicioPantalla } from '../Pantallas/Inicio/InicioPantalla';
 import { ProductosPantalla } from '../Pantallas/Productos/Productos-Pantalla';
 import { AjustesPantalla } from '../Pantallas/Ajustes/Ajustes-Pantalla';
 import { ProductoPantalla } from '../Pantallas/Productos/Producto-Pantalla';
+import { useNavigation } from '@react-navigation/native';
+import { useEffect } from 'react';
 
 
 
@@ -14,6 +16,12 @@ export type RootStackParametro = {
 }
 const Stack = createStackNavigator<RootStackParametro>();
 export const StackNavegacion = ()=> {
+  const navegacion = useNavigation()
+  useEffect(() => {
+   navegacion.setOptions({
+    headerShown: false
+   })
+  }, [])
   return (
     <Stack.Navigator
       screenOptions={{

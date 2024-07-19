@@ -5,6 +5,7 @@ import { ColoresGlobales } from '../theme/Temas';
 import { DrawerPersonalizao } from '../Componentes/Drawer/Drawer-Personalizao';
 import { useWindowDimensions } from 'react-native';
 import { BotonTabsNavegacion } from './Boton-Tabs-Navegacion';
+import { Icono } from '../Componentes/Icono';
 
 const Drawer = createDrawerNavigator();
 
@@ -18,7 +19,7 @@ export const DrawerNavegacion =() => {
         drawerType: (dimension.width >= 768) ?"permanent" : "slide",
         headerShown:false,
         drawerActiveBackgroundColor: ColoresGlobales.primario,
-        drawerActiveTintColor:ColoresGlobales.blanco,
+        drawerActiveTintColor:ColoresGlobales.fondo,
         drawerInactiveTintColor: ColoresGlobales.primario,
         drawerItemStyle:{
           borderRadius:100,
@@ -27,8 +28,16 @@ export const DrawerNavegacion =() => {
       }}
     >
       {/* <Drawer.Screen name="StackNavegacion" component={StackNavegacion} /> */}
-      <Drawer.Screen name="BotonTabsNavegacion" component={BotonTabsNavegacion} />
-      <Drawer.Screen name="Perfil" component={PerfilPantalla} />
+      <Drawer.Screen 
+        options={{
+          drawerIcon: ({color,focused,size}) => (<Icono nombre='bowling-ball-outline' color={color}/>)
+        }}
+        name="Tabs" component={BotonTabsNavegacion} />
+      <Drawer.Screen 
+         options={{
+          drawerIcon: ({color,focused,size}) => (<Icono nombre='american-football-outline' color={color}/>)
+        }}
+      name="Perfil" component={PerfilPantalla} />
     </Drawer.Navigator>
   );
 }
