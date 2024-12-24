@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+### Proyecto de Menú de Navegación - PS Network (APP)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este es un proyecto de navegación personalizada para una aplicación móvil utilizando React Native con Expo SDK 52. El menú simula un estilo de navegación similar al de PS Network, con un sistema de pestañas (TabBar) y un botón central destacado para realizar acciones, como "Jugar".
 
-## Get started
+### Descripción
 
-1. Install dependencies
+El proyecto implementa un menú de navegación con varias pantallas principales: Inicio, Explorar, Notificaciones y Perfil. La barra de navegación personalizada incluye un diseño con un arco en la parte inferior, un diseño atractivo, y un botón flotante de acción (Jugar) en el centro. Cada pestaña está asociada a un icono y un nombre de sección.
 
-   ```bash
-   npm install
-   ```
+### Funcionalidades principales:
 
-2. Start the app
+1. Navegación por pestañas (Inicio, Explorar, Notificaciones, Perfil).
+2. Diseño de barra de navegación personalizada con un SVG para el arco en la parte inferior.
+3. Botón de acción central (Jugar) que sobresale del resto de las pestañas.
+4. Estilos personalizados para la barra de navegación y las pestañas.
 
-   ```bash
-    npx expo start
-   ```
+### Tecnologías utilizadas
 
-In the output, you'll find options to open the app in a
+1. **React Native:** Para la creación de la aplicación móvil.
+2. **Expo SDK 52:** Para facilitar el desarrollo con herramientas como createBottomTabNavigator.
+3. **react-native-vector-icons:** Para los iconos utilizados en las pestañas.
+4. **react-native-svg:** Para el diseño del arco SVG en la parte inferior de la barra de navegación.
+5. **React Navigation:** Para la gestión de la navegación en la aplicación.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Instalación
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Para ejecutar este proyecto en tu máquina local, sigue los pasos a continuación:
 
-## Get a fresh project
-
-When you're ready, run:
+### Clonar el repositorio:
 
 ```bash
-npm run reset-project
+git clone https://github.com/tu_usuario/nombre_del_repositorio.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Instalar dependencias: Asegúrate de tener Node.js instalado. Luego, instala las dependencias con:
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Ejecutar el proyecto: Si no tienes Expo CLI, instálalo globalmente:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install -g expo-cli
+```
 
-## Join the community
+Luego, para iniciar el proyecto:
 
-Join our community of developers creating universal apps.
+```bash
+expo start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Esto abrirá el proyecto en tu navegador y podrás escanear el código QR con la app de Expo Go.
+
+### Estructura del proyecto
+
+La estructura del proyecto es la siguiente:
+
+1. **MenuNavegacion.tsx:** Componente principal que maneja la navegación por pestañas.
+2. **CustomTabBar.js:** Componente personalizado que gestiona la apariencia y funcionalidad de la barra de navegación.
+3. **Pantallas:** Cada una de las pantallas principales de la aplicación (Inicio, Explorar, Notificaciones, Perfil).
